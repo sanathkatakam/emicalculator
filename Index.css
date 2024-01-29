@@ -1,30 +1,41 @@
-body
-  {
-    background: ##D3D3D3;
-  }
-  h1
-  {
-    font-size: 45px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-.slidecontainer {
-  width: 100%;
+body{
+  background-color: #e6e6e6 !important;
+}
+
+.header {
+  background: #fffffe;
+  padding: 10px; 
+  width: auto;
+  height: auto; 
+  text-align: center; 
+  margin: auto;
+}
+
+.bodycontainer{
+  border-radius: 25px;
+  background: #fffffe;
+  padding: auto; 
+  width: auto;
+  height: auto; 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slidecontainer{
+  margin: auto;
 }
 
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 25px;
+  height: 10px;
+  border-radius: 5px;  
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
+  margin-bottom: 10px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -32,86 +43,63 @@ body
   appearance: none;
   width: 25px;
   height: 25px;
-  background: white;
+  border-radius: 50%; 
+  background: #22a53c;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #4CAF50;
+  border-radius: 50%;
+  background: #22a53c;
   cursor: pointer;
 }
-input[type="range"] { 
-    margin: auto;
-    -webkit-appearance: none;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 0; /* iOS */
+
+.form{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
 }
 
-::-webkit-slider-runnable-track {
-    background: #ddd;
+input[type="number"] {
+  clear: both;
+  float: right;
+  margin-bottom: 10px;
+  width: 100px;
 }
 
-/*
- * 1. Set to 0 width and remove border for a slider without a thumb
- */
-::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px; /* 1 */
-    height: 40px;
-    background: #fff;
-    box-shadow: -100vw 0 0 100vw dodgerblue;
-    border: 2px solid #999; /* 1 */
+.center {
+  margin: auto;
+  padding: 10px;
+  text-align: center;
 }
 
-::-moz-range-track {
-    height: 40px;
-    background: #ddd;
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
 }
 
-::-moz-range-thumb {
-    background: #fff;
-    height: 40px;
-    width: 20px;
-    border: 3px solid #999;
-    border-radius: 0 !important;
-    box-shadow: -100vw 0 0 100vw dodgerblue;
-    box-sizing: border-box;
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04AA6D;
 }
 
-::-ms-fill-lower { 
-    background: dodgerblue;
+.button1:hover {
+  background-color: #04AA6D;
+  color: white;
 }
-
-::-ms-thumb { 
-    background: #fff;
-    border: 2px solid #999;
-    height: 40px;
-    width: 20px;
-    box-sizing: border-box;
-}
-
-::-ms-ticks-after { 
-    display: none; 
-}
-
-::-ms-ticks-before { 
-    display: none; 
-}
-
-::-ms-track { 
-    background: #ddd;
-    color: transparent;
-    height: 40px;
-    border: none;
-}
-
-::-ms-tooltip { 
-    display: none;
-}
-  
-
-
