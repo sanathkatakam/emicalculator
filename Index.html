@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <title>EMI Calculator</title>
+    <meta name="description" content="EMI Calculator for Home Loan, Car Loan, Personal Loan">
+    
+    <meta name="page-topic" content="EMI Calculator for Home Loan, Car Loan, Personal Loan">
+    <meta name="topic" content="EMI Calculator for Home Loan, Car Loan, Personal Loan">
+    
+
+    <meta property="og:title" content="EMI Calculator for Home Loan, Car Loan, Personal Loan">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="EMI Calculator for Home Loan, Car Loan, Personal Loan">
+    <meta property="og:site_name" content="EMI Calculator for Home Loan, Car Loan, Personal Loan">
+
+    <meta name="keywords" content="EMI Calculator for Home Loan, Car Loan, Personal Loan, Simple EMI Calculator">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"/>
     <link rel="stylesheet" type="text/css" href="./Index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-  <form id="loan-form">
-      <h1 class="notification is-primary has-text">EMI Calculator</h1>
-
+<h1 class="header">EMI Calculator</h1>
+<div class="bodycontainer">
+  <form id="loan-form" class="form">
+      <br>
       <div class="slidecontainer">
-      <input type="range" min="100000" max="10000000" value="1000000" step="100000" class="slider" id="amount">  
+      <h6>Amount</h6>
+      <input type="number" class="w3-border w3-round" id="demo1" name="amt" value="">
+      <input type="range" min="100000" max="10000000" value="5000000" step="100000" class="slider" id="amount">  
       </div><br>
 
       <div class="slidecontainer">
-      <input type="range" min="1" max="20" value="10" step="0.1" class="slider" id="interest">
+        <h6>Interest Rate</h6>
+      <input type="number" class="w3-border w3-round" id="demo2" name="int" value="" step="0.1">
+      <input type="range" min="1" max="20" value="8.5" step="0.1" class="slider" id="interest">
       </div><br>
 
       <div class="slidecontainer">
-      <input type="range" min="1" max="30" value="10" class="slider" id="year">
+        <h6>Tenure (Years)</h6>
+      <input type="number" class="w3-border w3-round" id="demo3" name="tenure" value="">
+      <input type="range" min="1" max="30" value="15" class="slider" id="year">
       </div><br>
+    
 
-      <div class="columns is-multiline">
+      <!-- <div class="columns is-multiline">
   
         <div class="column is-12-tablet is-6-desktop is-3-widescreen">
           <div class="notification is-primary has-text">
@@ -42,43 +64,44 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
       <br><br>
-      <div class="control">
-      <button class="button is-large is-fullwidth is-primary is-outlined">Calculate</button>
+      <div class="">
+      <button class="button button1">Calculate</button>
       </div>
 
                   <!-- RESULTS -->
-      <section class="section"> 
-        <h1 class="title">Calculated Results</h1>
+      <section class="center"> 
+        <!-- <h1 class="center">Results</h1> -->
         <div class="columns is-multiline">
   
           <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-primary has-text">
-              <p id="monthlyPayment" class="title is-1">Rs</p>
-              <p class="subtitle is-4">Monthly Payments</p>
+            <div class="center">
+              <h3 id="monthlyPayment" class="">&#8377;</h3>
+              <h3 class="">Monthly EMI</h3>
             </div>
           </div>
 
           <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-info has-text">
-              <p id="totalInterest" class="title is-1">₹</p>
-              <p class="subtitle is-4">Total Interest</p>
+            <div class="center">
+              <h3 id="totalInterest" class="">&#8377;</h3>
+              <h3 class="">Total Interest</h3>
             </div>
           </div>
 
           <div class="column is-12-tablet is-6-desktop is-3-widescreen">
-            <div class="notification is-link has-text">
-              <p id="totalPayment" class="title is-1">₹ </p>
-              <p class="subtitle is-4">Total Amount</p>
+            <div class="center">
+              <h3 id="totalPayment" class="">&#8377;</h3>
+              <h3 class="">Total Amount (Principal + Interest)</h3>
             </div>
           </div>
 
         </div>
       </section>
-
   </form>
+</div>
+<h6 class="header">Developed by Sanath Katakam</h6>
   <script src="./Index.js"></script>
 </body>
 </html>
